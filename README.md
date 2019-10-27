@@ -1,8 +1,8 @@
 ## Lab 1
 
 ### Penggunaan end
-Fungsi "end" di dalam bahasa python, adalah salah satu fungsi dalam menggunakan Print. Secara default jika kita melakukan print dalam python, output akan dicetak dalam baris baru. Tetapi jika kita memasukan fungsi "end" maka hasil output tidak akan langsung berada di garis baru. Contoh :
-Kode :
+Didalam fungsi "**print()**" terdapat parameter "**end**" di dalam bahasa python. "**end**" adalah parameter yang digunakan untuk memasukan **string** atau **karakter** apapun untuk mengakhiri sebuah statement.  Secara default jika kita melakukan print dalam python, output akan dicetak dalam baris baru. Tapi jika kita memasukan fungsi "**end**" maka hasil output tidak akan langsung berada di garis baru.
+Contoh kode :
 
     # Penggunaan end  
     print('A', end="")  
@@ -13,5 +13,107 @@ Kode :
     print('Y')  
     print('Z')
 
-Output :
-![Output1](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/1_Output.PNG)
+Output yang di dapat :
+
+![Output_end](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/1_Output.PNG)
+
+Terlihat dari output  A, B dan C dicetak dalam baris yang sama, sedangkan output X, Y dan Z dicetak dengan baris baru. Jika kalian ingin membuat garis baru menggunakan fungsi end, kalian bisa menambahkan **"\n"**.
+
+    print('A', end="\n") 
+
+### Penggunaan Separator
+Separator "**sep**" dalam python digunakan sebagai pembatas antara output yang dihasilkan.
+**Contoh Kode :**
+
+    w, x, y, z = 10, 15, 20, 25  
+    print(w, x, y, z, sep=',')  
+    print(w, x, y, z, sep='')  
+    print(w, x, y, z, sep=':')  
+    print(w, x, y, z, sep='- - - - -')
+**Output yang didapat :**
+![Output_Sep](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/2_Output_Sep.PNG)
+Kita bisa mengisi **sep='isi_disini'** dengan string atau karakter apapun.
+
+### Penggunaan string format
+String format digunakan ketika kita ingin mengatur dan memposiskan string menjadi sedemikian rupa.
+**Contoh kode :**
+
+    # String yang belum di format
+    print(0, 10 ** 0)  
+    print(1, 10 ** 1)  
+    print(2, 10 ** 2)  
+    print(3, 10 ** 3)  
+    print(4, 10 ** 4)  
+    print(5, 10 ** 5)  
+    print(6, 10 ** 6)  
+    print(7, 10 ** 7)  
+    print(8, 10 ** 8)  
+    print(9, 10 ** 9)  
+    print(10, 10 ** 10)
+**Output :**
+![3_Output_String-f](url)
+Kita akan membuat outputnya menjadi seperti ini :
+![4_Output_String-f](url)
+Kode :
+
+    print('{0:>3} {1:>16}'.format(0, 10 ** 0))  
+    print('{0:>3} {1:>16}'.format(1, 10 ** 1))  
+    print('{0:>3} {1:>16}'.format(2, 10 ** 2))  
+    print('{0:>3} {1:>16}'.format(3, 10 ** 3))  
+    print('{0:>3} {1:>16}'.format(4, 10 ** 4))  
+    print('{0:>3} {1:>16}'.format(5, 10 ** 5))  
+    print('{0:>3} {1:>16}'.format(6, 10 ** 6))  
+    print('{0:>3} {1:>16}'.format(7, 10 ** 7))  
+    print('{0:>3} {1:>16}'.format(8, 10 ** 8))  
+    print('{0:>3} {1:>16}'.format(9, 10 ** 9))  
+    print('{0:>3} {1:>16}'.format(10, 10 ** 10))
+
+Dalam contoh di atas terdapat **{ }** yang berfungsi sebagai ***placeholder*** atau penempat **arguments**.
+Argument secara default urutannya adalah **berurutan**. 
+
+![6_Output_String_f](placeholder)
+
+Misalnya dalam contoh di atas, pada baris pertama terdapat argument **"0"** dan **"10 ** **0"**** didalam **format(0, 10 ** 0)**, yang dipisah dengan tanda **","** (koma), yang berarti __"0"__ adalah argument  **pertama** dan  __"10**0"__ adalah argument ke **2**.  Sedangkan angka **0** dan **1** di dalam ***placeholder***, merupakan urutan yang kita masukan. Misalnya ***placeholder*** pada urutan pertama yaitu "{**0**:>3}" dan kita ingin mengganti menjadi "**1**" maka yang akan dicetak di ***placeholder*** pertama adalah output dari "**10 ** 0**".
+**Contoh kode :**
+
+    print('{1:>3} {0:>16}'.format(0, 10 ** 0))
+
+**Output yang didapat :**
+![5_Output_String-f](url)
+
+Sedangkan untuk "**:>3**" digunakan untuk menentukan output di cetak pada urutan ke tiga. Urutan yang kosong akan menghasilkan output **spasi**.
+
+## Lab2
+Pada lab2 membahas tentang bagaimana memasukan input, menghitung dan mengubah tipe data.
+	
+**Contoh kode :**
+
+    a = input("masukan nilai a:")
+    b = input("masukan nilau b:")
+    print("variabel a =", a)
+    print("variabel b =", b)
+    print('hasil penggabungan {1} & {0} = %d'.format(a, b))
+    
+    a = int(a)
+    b = int(b)
+    
+    print('hasil penjumlahan {1} & {0} = %d'.format(a, b)%(a + b))
+    print('hasil pembagian {} & {} = %d'.format(a, b) % (a / b))
+
+**Output yang didapat :**
+![7_Output_lab2](7_Output_lab2)
+
+Pada baris pertama, input dimasukan dengan cara menjalankan program terlebih dahulu, kemudian data dimasukan (**Lihat angka 10 & 6 hijau**) dengan diikuti keterangan berupa string "**masukan nilai a:**". Lalu input di cetak menggunakan fungsi "**print()**", disertai keterangan. Selanjutnya pada kode :
+
+    print('hasil penggabungan {1} & {0} = %d'.format(a, b))
+
+Kemudian input dicetak kembali disertai dengan format baru menggunakan fungsi "format". Output dari print ini berbentuk tipe data **string**. Jadi bila kita jumlahkan input "**a**" dan "**b**" dengan operator "**+**" maka output dari penjumlahan tersebut akan menghasilkan "**106**" (**10** dan **6**) dan "**%d**" yang seharusnya hanya di proses dan tidak di cetak ke output jadi tercetak kedalam bentuk string atau text. Tetapi jika kita menggunakan tipe data, misalnya "**/**" maka akan terjadi **error**. Ini disebabkan karena tipe data yang berbentuk **string** atau **text** tidak bisa di jumlahkan dengan operator tersebut. Maka dari itu kita perlu **mengkonversikan** atau **mengubah** tipe data tersebut menjadi tipe data bersifat **bilangan** atau **angka**, misalnya integer atau float.
+
+    a = int(a)
+    b = int(b)
+
+Perintah di atas akan mengkonversikan tipe data sebelumnya ke bentuk tipe data integer. Dengan ini kita bisa menjumlahkan input sebagai angka.
+
+    print('hasil penjumlahan {1} & {0} = %d'.format(a, b)%(a + b))
+
+Perintah di atas digunakan untuk mencetak, menghitung dan memformat kembali output yang akan dihasilkan. "{1}" dan "{0}" adalah ***placeholder*** dan "**%d**" adalah perintah untuk mencetak output ke dalam bentuk desimal. Kita bisa mengubah "**%d**" menjadi, misalnya "**%f**", maka output yang akan di tampilkan akan berbentuk float.a

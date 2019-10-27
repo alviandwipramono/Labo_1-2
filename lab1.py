@@ -1,11 +1,13 @@
 # Penggunaan end
-print('A', end="")
+print('A', end="asdasdasd\nasdasdasd")
 print('B', end="")
 print('C', end="")
 print()
 print('X')
 print('Y')
 print('Z')
+
+print("asd")
 
 print("-"*1000)
 
