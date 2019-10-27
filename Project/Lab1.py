@@ -1,5 +1,5 @@
 # Penggunaan end
-print('A', end="asdasdasd\nasdasdasd")
+print('A', end="")
 print('B', end="")
 print('C', end="")
 print()
@@ -7,20 +7,12 @@ print('X')
 print('Y')
 print('Z')
 
-print("asd")
-
-print("-"*1000)
-
-
 # Penggunaan separator
 w, x, y, z = 10, 15, 20, 25
 print(w, x, y, z, sep=',')
 print(w, x, y, z, sep='')
 print(w, x, y, z, sep=':')
 print(w, x, y, z, sep='- - - - -')
-
-print("-"*1000)
-
 
 # String format
 print(0, 10 ** 0)
@@ -34,8 +26,6 @@ print(7, 10 ** 7)
 print(8, 10 ** 8)
 print(9, 10 ** 9)
 print(10, 10 ** 10)
-
-print("-"*1000)
 
 # String format
 print('{0:>3} {1:>16}'.format(0, 10 ** 0))
