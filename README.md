@@ -23,6 +23,7 @@ Terlihat dari output  A, B dan C dicetak dalam baris yang sama, sedangkan output
 
 ### Penggunaan Separator
 Separator "**sep**" dalam python digunakan sebagai pembatas antara output yang dihasilkan.
+
 **Contoh Kode :**
 
     w, x, y, z = 10, 15, 20, 25  
@@ -30,8 +31,11 @@ Separator "**sep**" dalam python digunakan sebagai pembatas antara output yang d
     print(w, x, y, z, sep='')  
     print(w, x, y, z, sep=':')  
     print(w, x, y, z, sep='- - - - -')
+    
 **Output yang didapat :**
+
 ![Output_Sep](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/2_Output_Sep.PNG)
+
 Kita bisa mengisi **sep='isi_disini'** dengan string atau karakter apapun.
 
 ### Penggunaan string format
@@ -50,10 +54,15 @@ String format digunakan ketika kita ingin mengatur dan memposiskan string menjad
     print(8, 10 ** 8)  
     print(9, 10 ** 9)  
     print(10, 10 ** 10)
+    
 **Output :**
-![3_Output_String-f](url)
+
+![3_Output_String-f](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/3_Output_String-f.PNG)
+
 Kita akan membuat outputnya menjadi seperti ini :
-![4_Output_String-f](url)
+
+![4_Output_String-f](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/4_Output_String-f.PNG)
+
 Kode :
 
     print('{0:>3} {1:>16}'.format(0, 10 ** 0))  
@@ -71,7 +80,7 @@ Kode :
 Dalam contoh di atas terdapat **{ }** yang berfungsi sebagai ***placeholder*** atau penempat **arguments**.
 Argument secara default urutannya adalah **berurutan**. 
 
-![6_Output_String_f](placeholder)
+![6_Output_String_f](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/6_Output_String-f.png)
 
 Misalnya dalam contoh di atas, pada baris pertama terdapat argument **"0"** dan **"10 ** **0"**** didalam **format(0, 10 ** 0)**, yang dipisah dengan tanda **","** (koma), yang berarti __"0"__ adalah argument  **pertama** dan  __"10**0"__ adalah argument ke **2**.  Sedangkan angka **0** dan **1** di dalam ***placeholder***, merupakan urutan yang kita masukan. Misalnya ***placeholder*** pada urutan pertama yaitu "{**0**:>3}" dan kita ingin mengganti menjadi "**1**" maka yang akan dicetak di ***placeholder*** pertama adalah output dari "**10 ** 0**".
 **Contoh kode :**
@@ -79,7 +88,8 @@ Misalnya dalam contoh di atas, pada baris pertama terdapat argument **"0"** dan 
     print('{1:>3} {0:>16}'.format(0, 10 ** 0))
 
 **Output yang didapat :**
-![5_Output_String-f](url)
+
+![5_Output_String-f](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/5_Output_String-f.PNG)
 
 Sedangkan untuk "**:>3**" digunakan untuk menentukan output di cetak pada urutan ke tiga. Urutan yang kosong akan menghasilkan output **spasi**.
 
@@ -101,7 +111,8 @@ Pada lab2 membahas tentang bagaimana memasukan input, menghitung dan mengubah ti
     print('hasil pembagian {} & {} = %d'.format(a, b) % (a / b))
 
 **Output yang didapat :**
-![7_Output_lab2](7_Output_lab2)
+
+![7_Output_lab2](https://github.com/antonmartinus72/Labo_1-2/blob/master/img/7_Output_lab2.PNG)
 
 Pada baris pertama, input dimasukan dengan cara menjalankan program terlebih dahulu, kemudian data dimasukan (**Lihat angka 10 & 6 hijau**) dengan diikuti keterangan berupa string "**masukan nilai a:**". Lalu input di cetak menggunakan fungsi "**print()**", disertai keterangan. Selanjutnya pada kode :
 
